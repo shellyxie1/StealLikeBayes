@@ -1,15 +1,21 @@
 Package: StealLikeBayes
 Type: Package
-Title: What the Package Does (Short Line)
-Version: 1.0
+Title: A C++ compendium of Bayesian statistical routines for R packages
+Version: 0.1
 Date: 2025-11-06
-Author: Who wrote it
-Maintainer: Who to complain to
-      <yourfault@somewhere.net>
-Description: More about what it does (maybe more than
-      one line).
+Authors@R: c(person("Tomasz", "Woźniak", , "wozniak.tom@pm.me", role = c("aut", "cre"),comment = c(ORCID = "0000-0003-2212-2378")))
+Maintainer: Tomasz Woźniak <wozniak.tom@pm.me>
+Description: 
+  This is a compendium of C++ routines useful for Bayesian statistics. We steal 
+  other people's C++ code, repurpose it, and export it so developers of R 
+  packages can easily use it in their C++ code. We actually don't steal 
+  anything, but copy code that is compatible with our GPL 3 licence, fully 
+  acknowledging the authorship of the original code.
 License: GPL (>= 3)
-Imports: Rcpp (>= 1.1.0)
-LinkingTo: Rcpp, RcppArmadillo
+Imports: 
+  Rcpp (>= 1.1.0)
+LinkingTo: 
+  Rcpp, 
+  RcppArmadillo
 Encoding: UTF-8
 RoxygenNote: 7.3.3
