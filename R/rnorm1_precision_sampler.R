@@ -12,7 +12,7 @@
 #' 
 #' This method is useful for the simulation smoother of the linear Gaussian 
 #' state-space models with the state variable specified by the autoregressive
-#' dynamics with one lag, AR(1).
+#' dynamics with one lag, AR(1). See Woźniak (2021) for more details.
 #' 
 #' @details This function is based on C++ code from the R package \pkg{stochvol}
 #' by Hosszejni & Kastner (2025) and Kastner G. (2016) and is using 
@@ -21,13 +21,13 @@
 #' Ni, & Sanderson (2025)
 #' 
 #' @param location an \eqn{N}-vector with the location parameter \eqn{L}. 
-#' \bold{C++}: an \code{arma:vec} vector object.
+#' \strong{C++}: an \code{arma:vec} vector object.
 #' @param precision_diag an \eqn{N}-vector with the diagonal elements of the 
-#' precision matrix \eqn{P}. \bold{C++}: an \code{arma:vec} vector object.
+#' precision matrix \eqn{P}. \strong{C++}: an \code{arma:vec} vector object.
 #' @param precision_offdiag a numeric scalar with the off-diagonal element of 
-#' the precision matrix \eqn{P}. \bold{C++}: a \code{double} scalar.
+#' the precision matrix \eqn{P}. \strong{C++}: a \code{double} scalar.
 #' @return  an \eqn{N}-vector with random draws from the multivariate normal 
-#' distribution. \bold{C++}: an \code{arma:vec} vector object.
+#' distribution. \strong{C++}: an \code{arma:vec} vector object.
 #' 
 #' @author Tomasz Woźniak \email{wozniak.tom@pm.me}
 #' 
@@ -53,6 +53,9 @@
 #' Sanderson C., Curtin R. (2025). Armadillo: An Efficient Framework for 
 #' Numerical Linear Algebra. International Conference on Computer and Automation 
 #' Engineering, 303-307, <doi:10.1109/ICCAE64891.2025.10980539>
+#' 
+#' Woźniak T. (2021). Simulation Smoother using RcppArmadillo, 
+#' RcppGallery \url{https://gallery.rcpp.org/articles/simulation-smoother-using-rcpparmadillo/}
 #' 
 #' @examples 
 #' rnorm1_precision_sampler(rep(0, 100), rep(1, 100), -0.5)
