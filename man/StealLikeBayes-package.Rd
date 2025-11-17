@@ -17,7 +17,7 @@ This is a collaborative project. You are welcome to contribute. Please,
 read the documentation and get to work of stealing like Bayes!
 }
 \author{
-\strong{Maintainer}: Tomasz Woźniak \email{wozniak.tom@pm.me} (\href{https://orcid.org/0000-0003-2212-2378}{ORCID})
+\strong{Maintainer}: Tomasz Woźniak \email{wozniak.tom@pm.me} (\href{https://orcid.org/0000-0003-2212-2378}{ORCID}) (contributions: rnorm1_precision_sampler)
 
 }
 \keyword{internal}

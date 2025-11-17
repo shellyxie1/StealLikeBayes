@@ -3,7 +3,18 @@ Type: Package
 Title: A C++ compendium of Bayesian statistical routines for R packages
 Version: 0.1
 Date: 2025-11-06
-Authors@R: c(person("Tomasz", "Woźniak", , "wozniak.tom@pm.me", role = c("aut", "cre"),comment = c(ORCID = "0000-0003-2212-2378")))
+Authors@R: c(
+    person(
+      "Tomasz", 
+      "Woźniak",, 
+      "wozniak.tom@pm.me", 
+      role = c("aut", "cre"),
+      comment = c(
+        ORCID = "0000-0003-2212-2378", 
+        contributions = "contributions: rnorm1_precision_sampler"
+      )
+    )
+  )
 Maintainer: Tomasz Woźniak <wozniak.tom@pm.me>
 Description: 
   This is a compendium of C++ routines useful for Bayesian statistics. We steal 
