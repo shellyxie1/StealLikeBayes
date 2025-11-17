@@ -73,8 +73,8 @@ You are welcome to contribute to **StealLikeBayes**! How does this work?
     contribute.
 - [ ] Include the corresponding **C++** header file,
   `src/[main_routine].h` with all your **C++** functions.
-- Include one **R** file with a wrapper for your main **C++** function,
-  `R/[main_routine].R`.
+- [ ] Include one **R** file with a wrapper for your main **C++**
+  function, `R/[main_routine].R`.
   - [ ] This function must include argument type checks using
     `stopifnot()`.
   - [ ] Include full documentation using **roxygen2** that must have all

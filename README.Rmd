@@ -66,7 +66,7 @@ devtools::check()
   - [ ] Export all **C++** functions by including **Rcpp** directives `// [[Rcpp::interfaces(cpp)]]` and `// [[Rcpp::export]]`.
   - [ ] Write and **R** wrapper only for the main function you contribute.
 - [ ] Include the corresponding **C++** header file, `src/[main_routine].h` with all your **C++** functions.
-- Include one **R** file with a wrapper for your main **C++** function, `R/[main_routine].R`.
+- [ ] Include one **R** file with a wrapper for your main **C++** function, `R/[main_routine].R`.
   - [ ] This function must include argument type checks using `stopifnot()`.
   - [ ] Include full documentation using **roxygen2** that must have all necessary elements including:
   - [ ] the description of arguments and values, also described in terms of the **C++** objects,
