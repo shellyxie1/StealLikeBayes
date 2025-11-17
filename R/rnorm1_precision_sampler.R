@@ -54,17 +54,12 @@
 #' Numerical Linear Algebra. International Conference on Computer and Automation 
 #' Engineering, 303-307, <doi:10.1109/ICCAE64891.2025.10980539>
 #' 
+#' @examples 
+#' rnorm1_precision_sampler(rep(0, 100), rep(1, 100), -0.5)
+#' 
 #' @export
-rnorm1_precision_sampler <- function(precision_diag, precision_offdiag, location) {
+rnorm1_precision_sampler <- function(location, precision_diag, precision_offdiag) {
   
-  stopifnot(
-    "The argument precision_diag must be a numeric vector with real numbers." =
-    is.numeric(precision_diag) & all(!is.na(precision_diag)) 
-  )
-  stopifnot(
-    "The argument precision_offdiag must be a real number." =
-    is.numeric(precision_offdiag) & length(precision_offdiag) == 1
-  )
   stopifnot(
     "The argument location must be a numeric vector with real numbers." =
     is.numeric(location) & all(!is.na(location)) 
@@ -72,6 +67,14 @@ rnorm1_precision_sampler <- function(precision_diag, precision_offdiag, location
   stopifnot(
     "Arguments precision_diag and location must be of the same length." =
     length(location) == length(precision_diag)  
+  )
+  stopifnot(
+    "The argument precision_diag must be a numeric vector with real numbers." =
+    is.numeric(precision_diag) & all(!is.na(precision_diag)) 
+  )
+  stopifnot(
+    "The argument precision_offdiag must be a real number." =
+    is.numeric(precision_offdiag) & length(precision_offdiag) == 1
   )
 
   out = .Call(`_StealLikeBayes_rnorm1_precision_sampler`, location, precision_diag, precision_offdiag)
