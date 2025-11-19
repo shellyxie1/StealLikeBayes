@@ -3,10 +3,7 @@
 # test_sample_horseshoe_variances.R
 # Unit tests for the horseshoe prior variance sampler
 
-library(testthat)
-
 # Test 1: Basic functionality - function runs without errors
-test_that("Function runs without errors with valid inputs", {
   p <- 10
   coefs <- rnorm(p, 0, 0.5)
   theta <- rep(1, p)
@@ -17,7 +14,6 @@ test_that("Function runs without errors with valid inputs", {
   expect_no_error(
     V_i <- sample_variances_horseshoe(coefs, theta, zeta, nu, varpi)
   )
-})
 
 # Test 2: Return structure
 test_that("Function returns a vector of correct length", {
