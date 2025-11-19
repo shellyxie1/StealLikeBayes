@@ -3,5 +3,7 @@
 export(rgennorm)
 export(rhaar1)
 export(rnorm1_precision_sampler)
+export(sample_variances_normal_gamma)
+import(shrinkTVP)
 importFrom(Rcpp,sourceCpp)
 useDynLib(StealLikeBayes, .registration = TRUE)

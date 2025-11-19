@@ -24,6 +24,16 @@ Authors@R: c(
         ORCID = "0009-0005-6192-9061", 
         contributions = "contributions: rhaar1"
       )
+    ),
+    person(
+      "Jianying Shelly", 
+      "Xie",, 
+      "shellyyinggxie@gmail.com", 
+      role = c("aut"),
+      comment = c(
+        ORCID = "0009-0008-6451-6416", 
+        contributions = "contributions: sample_variances_normal_gamma"
+      )
     )
   )
 Description: 
@@ -34,9 +44,12 @@ Description:
   licence, fully acknowledging the authorship of the original code.
 Imports: 
   Rcpp (>= 1.1.0)
+Depends: 
+  shrinkTVP
 LinkingTo: 
   Rcpp, 
-  RcppArmadillo
+  RcppArmadillo,
+  shrinkTVP
 Suggests: 
   tinytest
 URL: http://bsvars.org/StealLikeBayes/

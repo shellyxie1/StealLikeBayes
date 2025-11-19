@@ -35,6 +35,7 @@
 #' @aliases StealLikeBayes-package StealLikeBayes
 #' @docType package
 #' @importFrom Rcpp sourceCpp
+#' @import shrinkTVP
 #' @useDynLib StealLikeBayes, .registration = TRUE
 #' @keywords internal Bayesian
 '_PACKAGE'
