@@ -34,6 +34,16 @@ Authors@R: c(
         ORCID = "0009-0007-2190-768X", 
         contributions = "contributions: sample_variances_horseshoe"
       )
+    ),
+    person(
+      "Filip",
+      "Reierson",,
+      "filip.reierson@gmail.com", 
+      role = c("aut"),
+      comment = c(
+        ORCID = "0009-0003-2393-5810", 
+        contributions = "contributions: rtmvnorm"
+      )
     )
   )
 Description: 

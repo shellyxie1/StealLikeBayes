@@ -9,4 +9,5 @@ Now, you can as well StealLikeBayes*! * - We don't actually steal anything or cl
 1. `rnorm1_precision_sampler` provided by [@donotdespair](https://github.com/donotdespair) [#1](https://github.com/bsvars/StealLikeBayes/issues/1)
 2. `rgennorm` provided by [@donotdespair](https://github.com/donotdespair) [#5](https://github.com/bsvars/StealLikeBayes/issues/5)
 3. `rhaar1` provided by [@adamwang15](https://github.com/adamwang15) [#6](https://github.com/bsvars/StealLikeBayes/issues/6)
-4. `sample_variances_horseshoe` provided by [@longcando](https://github.com/Longcando) [#6](https://github.com/bsvars/StealLikeBayes/issues/9)
+4. `sample_variances_horseshoe` provided by [@longcando](https://github.com/Longcando) [#9](https://github.com/bsvars/StealLikeBayes/issues/9)
+5. `rtmvnorm` provided by [@freierson](https://github.com/freierson) [#12](https://github.com/bsvars/StealLikeBayes/issues/12)

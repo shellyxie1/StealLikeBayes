@@ -193,6 +193,132 @@ namespace StealLikeBayes {
         return Rcpp::as<arma::vec >(rcpp_result_gen);
     }
 
+    inline double norm_rej(const double a, const double b) {
+        typedef SEXP(*Ptr_norm_rej)(SEXP,SEXP);
+        static Ptr_norm_rej p_norm_rej = NULL;
+        if (p_norm_rej == NULL) {
+            validateSignature("double(*norm_rej)(const double,const double)");
+            p_norm_rej = (Ptr_norm_rej)R_GetCCallable("StealLikeBayes", "_StealLikeBayes_norm_rej");
+        }
+        RObject rcpp_result_gen;
+        {
+            RNGScope RCPP_rngScope_gen;
+            rcpp_result_gen = p_norm_rej(Shield<SEXP>(Rcpp::wrap(a)), Shield<SEXP>(Rcpp::wrap(b)));
+        }
+        if (rcpp_result_gen.inherits("interrupted-error"))
+            throw Rcpp::internal::InterruptedException();
+        if (Rcpp::internal::isLongjumpSentinel(rcpp_result_gen))
+            throw Rcpp::LongjumpException(rcpp_result_gen);
+        if (rcpp_result_gen.inherits("try-error"))
+            throw Rcpp::exception(Rcpp::as<std::string>(rcpp_result_gen).c_str());
+        return Rcpp::as<double >(rcpp_result_gen);
+    }
+
+    inline double unif_rej(const double a, const double b) {
+        typedef SEXP(*Ptr_unif_rej)(SEXP,SEXP);
+        static Ptr_unif_rej p_unif_rej = NULL;
+        if (p_unif_rej == NULL) {
+            validateSignature("double(*unif_rej)(const double,const double)");
+            p_unif_rej = (Ptr_unif_rej)R_GetCCallable("StealLikeBayes", "_StealLikeBayes_unif_rej");
+        }
+        RObject rcpp_result_gen;
+        {
+            RNGScope RCPP_rngScope_gen;
+            rcpp_result_gen = p_unif_rej(Shield<SEXP>(Rcpp::wrap(a)), Shield<SEXP>(Rcpp::wrap(b)));
+        }
+        if (rcpp_result_gen.inherits("interrupted-error"))
+            throw Rcpp::internal::InterruptedException();
+        if (Rcpp::internal::isLongjumpSentinel(rcpp_result_gen))
+            throw Rcpp::LongjumpException(rcpp_result_gen);
+        if (rcpp_result_gen.inherits("try-error"))
+            throw Rcpp::exception(Rcpp::as<std::string>(rcpp_result_gen).c_str());
+        return Rcpp::as<double >(rcpp_result_gen);
+    }
+
+    inline double halfnorm_rej(const double a, const double b) {
+        typedef SEXP(*Ptr_halfnorm_rej)(SEXP,SEXP);
+        static Ptr_halfnorm_rej p_halfnorm_rej = NULL;
+        if (p_halfnorm_rej == NULL) {
+            validateSignature("double(*halfnorm_rej)(const double,const double)");
+            p_halfnorm_rej = (Ptr_halfnorm_rej)R_GetCCallable("StealLikeBayes", "_StealLikeBayes_halfnorm_rej");
+        }
+        RObject rcpp_result_gen;
+        {
+            RNGScope RCPP_rngScope_gen;
+            rcpp_result_gen = p_halfnorm_rej(Shield<SEXP>(Rcpp::wrap(a)), Shield<SEXP>(Rcpp::wrap(b)));
+        }
+        if (rcpp_result_gen.inherits("interrupted-error"))
+            throw Rcpp::internal::InterruptedException();
+        if (Rcpp::internal::isLongjumpSentinel(rcpp_result_gen))
+            throw Rcpp::LongjumpException(rcpp_result_gen);
+        if (rcpp_result_gen.inherits("try-error"))
+            throw Rcpp::exception(Rcpp::as<std::string>(rcpp_result_gen).c_str());
+        return Rcpp::as<double >(rcpp_result_gen);
+    }
+
+    inline double exp_rej(const double a, const double b) {
+        typedef SEXP(*Ptr_exp_rej)(SEXP,SEXP);
+        static Ptr_exp_rej p_exp_rej = NULL;
+        if (p_exp_rej == NULL) {
+            validateSignature("double(*exp_rej)(const double,const double)");
+            p_exp_rej = (Ptr_exp_rej)R_GetCCallable("StealLikeBayes", "_StealLikeBayes_exp_rej");
+        }
+        RObject rcpp_result_gen;
+        {
+            RNGScope RCPP_rngScope_gen;
+            rcpp_result_gen = p_exp_rej(Shield<SEXP>(Rcpp::wrap(a)), Shield<SEXP>(Rcpp::wrap(b)));
+        }
+        if (rcpp_result_gen.inherits("interrupted-error"))
+            throw Rcpp::internal::InterruptedException();
+        if (Rcpp::internal::isLongjumpSentinel(rcpp_result_gen))
+            throw Rcpp::LongjumpException(rcpp_result_gen);
+        if (rcpp_result_gen.inherits("try-error"))
+            throw Rcpp::exception(Rcpp::as<std::string>(rcpp_result_gen).c_str());
+        return Rcpp::as<double >(rcpp_result_gen);
+    }
+
+    inline arma::vec rtnormcpp(const arma::vec& mean, const double sd, const arma::vec& lower, const arma::vec& upper) {
+        typedef SEXP(*Ptr_rtnormcpp)(SEXP,SEXP,SEXP,SEXP);
+        static Ptr_rtnormcpp p_rtnormcpp = NULL;
+        if (p_rtnormcpp == NULL) {
+            validateSignature("arma::vec(*rtnormcpp)(const arma::vec&,const double,const arma::vec&,const arma::vec&)");
+            p_rtnormcpp = (Ptr_rtnormcpp)R_GetCCallable("StealLikeBayes", "_StealLikeBayes_rtnormcpp");
+        }
+        RObject rcpp_result_gen;
+        {
+            RNGScope RCPP_rngScope_gen;
+            rcpp_result_gen = p_rtnormcpp(Shield<SEXP>(Rcpp::wrap(mean)), Shield<SEXP>(Rcpp::wrap(sd)), Shield<SEXP>(Rcpp::wrap(lower)), Shield<SEXP>(Rcpp::wrap(upper)));
+        }
+        if (rcpp_result_gen.inherits("interrupted-error"))
+            throw Rcpp::internal::InterruptedException();
+        if (Rcpp::internal::isLongjumpSentinel(rcpp_result_gen))
+            throw Rcpp::LongjumpException(rcpp_result_gen);
+        if (rcpp_result_gen.inherits("try-error"))
+            throw Rcpp::exception(Rcpp::as<std::string>(rcpp_result_gen).c_str());
+        return Rcpp::as<arma::vec >(rcpp_result_gen);
+    }
+
+    inline arma::mat rtmvnorm(const arma::mat& mean, const arma::mat& sigma, const arma::mat& blc, const arma::mat& lower, const arma::mat& upper, const arma::mat& init, const arma::uword burn = 10) {
+        typedef SEXP(*Ptr_rtmvnorm)(SEXP,SEXP,SEXP,SEXP,SEXP,SEXP,SEXP);
+        static Ptr_rtmvnorm p_rtmvnorm = NULL;
+        if (p_rtmvnorm == NULL) {
+            validateSignature("arma::mat(*rtmvnorm)(const arma::mat&,const arma::mat&,const arma::mat&,const arma::mat&,const arma::mat&,const arma::mat&,const arma::uword)");
+            p_rtmvnorm = (Ptr_rtmvnorm)R_GetCCallable("StealLikeBayes", "_StealLikeBayes_rtmvnorm");
+        }
+        RObject rcpp_result_gen;
+        {
+            RNGScope RCPP_rngScope_gen;
+            rcpp_result_gen = p_rtmvnorm(Shield<SEXP>(Rcpp::wrap(mean)), Shield<SEXP>(Rcpp::wrap(sigma)), Shield<SEXP>(Rcpp::wrap(blc)), Shield<SEXP>(Rcpp::wrap(lower)), Shield<SEXP>(Rcpp::wrap(upper)), Shield<SEXP>(Rcpp::wrap(init)), Shield<SEXP>(Rcpp::wrap(burn)));
+        }
+        if (rcpp_result_gen.inherits("interrupted-error"))
+            throw Rcpp::internal::InterruptedException();
+        if (Rcpp::internal::isLongjumpSentinel(rcpp_result_gen))
+            throw Rcpp::LongjumpException(rcpp_result_gen);
+        if (rcpp_result_gen.inherits("try-error"))
+            throw Rcpp::exception(Rcpp::as<std::string>(rcpp_result_gen).c_str());
+        return Rcpp::as<arma::mat >(rcpp_result_gen);
+    }
+
 }
 
 #endif // RCPP_StealLikeBayes_RCPPEXPORTS_H_GEN_
