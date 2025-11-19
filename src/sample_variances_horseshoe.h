@@ -10,7 +10,7 @@ arma::vec sample_variances_horseshoe(
                         double& zeta,           // Global variance tao^2
                         arma::vec& nu,          // Auxiliary for lambda^2
                         double& varpi          // Auxiliary for tao^2
-                       )         
+                       );       
 
 #endif
                         

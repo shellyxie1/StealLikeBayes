@@ -8,27 +8,26 @@ sample_variances_horseshoe(coefs, theta, zeta, nu, varpi)
 }
 \arguments{
 \item{coefs}{a \eqn{p}-vector with the current coefficient values \eqn{\beta_j}. 
-\strong{C++}: an \code{vec} vector object.}
+\strong{C++}: an \code{arma::vec} vector object.}
 
 \item{theta}{a \eqn{p}-vector with the local variance parameters \eqn{\lambda_j^2}, 
-updated by reference. \strong{C++}: an \code{vec} vector object.}
+updated by reference. \strong{C++}: an \code{arma::vec} vector object.}
 
 \item{zeta}{a numeric scalar with the global variance parameter \eqn{\tau^2}, 
 updated by reference. \strong{C++}: a \code{double} scalar.}
 
 \item{nu}{a \eqn{p}-vector with auxiliary variables for the local shrinkage, 
-updated by reference. \strong{C++}: an \code{vec} vector object.}
+updated by reference. \strong{C++}: an \code{arma::vec} vector object.}
 
 \item{varpi}{a numeric scalar with the auxiliary variable for the global 
-shrinkage, updated by reference. \strong{C++}: a \code{double} scalar.
-\strong{C++}: an \code{uvec} vector object (0-based indexing).}
+shrinkage, updated by reference. \strong{C++}: a \code{double} scalar.}
 }
 \value{
-a vector of random draws
+a vector of variances' random draws. \strong{C++}: an \code{arma::vec} vector object.
 }
 \description{
 Performs one Gibbs sampling iteration for the horseshoe prior
-variance parameters. The horseshoe prior (Carvalho et al., 2010) is a 
+variance parameters. The horseshoe prior Carvalho, Polson, Scott (2010) is a 
 continuous shrinkage prior for Bayesian variable selection with the 
 hierarchical structure:
 \deqn{\beta_j \sim N(0, \lambda_j^2 \tau^2)}
@@ -50,22 +49,22 @@ by Gruber & Kastner (2024) and is using objects and commands from the \pkg{armad
 Thanks to the \pkg{RcppArmadillo} package by Eddelbuettel, Francois, Bates, Ni, & Sanderson (2025).
 }
 \examples{
-result <- sample_variances_horseshoe( rep(0, 2), rep(0, 2), 1, rep(1, 2), 1)
+sample_variances_horseshoe( rep(0, 2), rep(0, 2), 1, rep(1, 2), 1)
 
 }
 \references{
 Carvalho C.M., Polson N.G., Scott J.G. (2010). The horseshoe estimator for 
-sparse signals. Biometrika, 97(2), 465???480. <doi:10.1093/biomet/asq017>
+sparse signals. Biometrika, 97(2), 465-480. <doi:10.1093/biomet/asq017>
 
 Eddelbuettel D., Francois R., Bates D., Ni B., Sanderson C. (2025). 
 RcppArmadillo: 'Rcpp' Integration for the 'Armadillo' Templated Linear 
 Algebra Library. R package version 15.0.2-2. <doi:10.32614/CRAN.package.RcppArmadillo>
 
-Gruber L.,Kastner G. (2024). bayesianVARs: MCMC Estimation of Bayesian Vectorautoregressions.
+Gruber L.,Kastner G. (2024). bayesianVARs: MCMC Estimation of Bayesian Vector Autoregressions.
 R package version 0.1.5, <doi:10.32614/CRAN.package.bayesianVARs>
 
 Makalic E., Schmidt D.F. (2016). A Simple Sampler for the Horseshoe Estimator. 
-IEEE Signal Processing Letters, 23(1), 179???182. <doi:10.1109/LSP.2015.2503725>
+IEEE Signal Processing Letters, 23(1), 179-182. <doi:10.1109/LSP.2015.2503725>
 
 Sanderson C., Curtin R. (2025). Armadillo: An Efficient Framework for 
 Numerical Linear Algebra. International Conference on Computer and Automation 
