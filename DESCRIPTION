@@ -76,3 +76,4 @@ BugReports: https://github.com/bsvars/StealLikeBayes/issues
 License: GPL (>= 3)
 Encoding: UTF-8
 RoxygenNote: 7.3.3
+Config/Needs/website: rmarkdown
