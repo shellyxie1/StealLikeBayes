@@ -48,7 +48,8 @@ You are welcome to contribute to **StealLikeBayes**! How does this work?
   template*.
 - [ ] Fork the repository
   [bsvars/StealLikeBayes](https://github.com/bsvars/StealLikeBayes).
-- [ ] Follow the instructions from the issue.
+- [ ] Follow the [instructions from the
+  issue](https://bsvars.org/StealLikeBayes/articles/Instrucions.html).
 - [ ] Always push your commits linking them all to your issue by
   including the hash tag of your issue.
 - [ ] Run checks of the package locally. They all need to pass!
