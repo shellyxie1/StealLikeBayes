@@ -39,8 +39,7 @@ Eigen::MatrixXd symmetrise(const Eigen::MatrixXd &cov) {
 }
 
 
-// [[Rcpp::interfaces(cpp)]]
-// [[Rcpp::export]]
+
 Eigen::LLT<Eigen::MatrixXd> safe_cholesky(const Eigen::MatrixXd &cov) {
   Eigen::LLT<Eigen::MatrixXd> cov_llt(cov);
   if (cov_llt.info() == Eigen::NumericalIssue) {
