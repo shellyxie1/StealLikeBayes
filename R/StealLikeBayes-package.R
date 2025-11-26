@@ -18,18 +18,18 @@
 #  along with the R package StealLikeBayes If that is not the case, please
 #  refer to <http://www.gnu.org/licenses/>.
 #  #####################################################################################
-#' @title A C++ compendium of Bayesian statistical routines for R packages
+#' @title A Compendium of Bayesian Statistical Routines Written in \proglang{C++}
 #'
-#' @description This is a compendium of C++ routines useful for Bayesian 
-#' statistics. We steal other people's C++ code, repurpose it, and export it so 
-#' developers of R packages can use it in their C++ code. We actually don't 
+#' @description This is a compendium of \proglang{C++} routines useful for Bayesian 
+#' statistics. We steal other people's \proglang{C++} code, repurpose it, and export it so 
+#' developers of R packages can use it in their \proglang{C++} code. We actually don't 
 #' steal anything, or claim that Thomas Bayes did, but copy code that is 
 #' compatible with our GPL 3 licence, fully acknowledging the authorship of the 
 #' original code.
 #' 
 #' @note This is a collaborative project. You are welcome to contribute. Please,
 #' read the documentation at \url{https://bsvars.org/StealLikeBayes/dev/} and 
-#' StealLikeBayes!
+#' \pkg{StealLikeBayes}!
 #' 
 #' @name StealLikeBayes-package
 #' @aliases StealLikeBayes-package StealLikeBayes

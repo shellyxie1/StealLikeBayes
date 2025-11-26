@@ -1,8 +1,8 @@
 Package: StealLikeBayes
 Type: Package
-Title: A C++ Compendium of Bayesian Statistical Routines for R Packages
+Title: A Compendium of Bayesian Statistical Routines Written in 'C++'
 Version: 1.0
-Date: 2025-11-21
+Date: 2025-11-26
 Maintainer: Tomasz Woźniak <wozniak.tom@pm.me>
 Authors@R: c(
     person(
@@ -67,9 +67,9 @@ Authors@R: c(
     )
   )
 Description: 
-  This is a compendium of C++ routines useful for Bayesian statistics. We steal 
-  other people's C++ code, repurpose it, and export it so developers of R 
-  packages can use it in their C++ code. We actually don't steal anything, or 
+  This is a compendium of 'C++' routines useful for Bayesian statistics. We steal 
+  other people's 'C++' code, repurpose it, and export it so developers of 'R' 
+  packages can use it in their 'C++' code. We actually don't steal anything, or 
   claim that Thomas Bayes did, but copy code that is compatible with our GPL 3 
   licence, fully acknowledging the authorship of the original code.
 Imports: 
