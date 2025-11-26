@@ -38,16 +38,6 @@ Eigen::MatrixXd symmetrise(const Eigen::MatrixXd &cov) {
   return 0.5 * (cov + cov.transpose());
 }
 
-
-
-Eigen::LLT<Eigen::MatrixXd> safe_cholesky(const Eigen::MatrixXd &cov) {
-  Eigen::LLT<Eigen::MatrixXd> cov_llt(cov);
-  if (cov_llt.info() == Eigen::NumericalIssue) {
-    Rcpp::stop("Covariance must be positive definite.");
-  }
-  return cov_llt;
-}
-
 // [[Rcpp::interfaces(cpp)]]
 // [[Rcpp::export]]
 Eigen::MatrixXd transform_constraint_matrix(const Eigen::MatrixXd &F,
@@ -256,7 +246,10 @@ Eigen::MatrixXd rtmvnorm_hmc(int n,
 
   const int dim = mean.size();
   const Eigen::MatrixXd cov_sym = symmetrise(cov);
-  const Eigen::LLT<Eigen::MatrixXd> cov_llt = safe_cholesky(cov_sym);
+  Eigen::LLT<Eigen::MatrixXd> cov_llt(cov_sym);
+  if (cov_llt.info() == Eigen::NumericalIssue) {
+    Rcpp::stop("Covariance must be positive definite.");
+  }
   const Eigen::MatrixXd L = cov_llt.matrixL();
 
   const Eigen::MatrixXd transformed_F = transform_constraint_matrix(F, L);

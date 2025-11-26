@@ -13,8 +13,6 @@ void validate_dimensions(const Eigen::MatrixXd &cov,
 
 Eigen::MatrixXd symmetrise(const Eigen::MatrixXd &cov);
 
-Eigen::LLT<Eigen::MatrixXd> safe_cholesky(const Eigen::MatrixXd &cov);
-
 Eigen::MatrixXd transform_constraint_matrix(const Eigen::MatrixXd &F,
                                             const Eigen::MatrixXd &L);
 
